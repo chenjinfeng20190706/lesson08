@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.5 on win32)" generated="20180904 14:52:00.570">
+<suite id="s1" name="Tc01" source="E:\temp\RFMyselfTask\lesson07\tc\tc01.robot">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>setupWebTest</arg>
+<arg>AND</arg>
+<arg>loginWebSite</arg>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<kw name="Setup Web Test" library="keywords">
+<status status="PASS" starttime="20180904 14:52:00.670" endtime="20180904 14:52:06.075"></status>
+</kw>
+<kw name="Login Web Site" library="keywords">
+<arguments>
+<arg>auto</arg>
+<arg>sdfsdfsdf</arg>
+</arguments>
+<status status="PASS" starttime="20180904 14:52:06.075" endtime="20180904 14:52:07.756"></status>
+</kw>
+<status status="PASS" starttime="20180904 14:52:00.670" endtime="20180904 14:52:07.756"></status>
+</kw>
+<test id="s1-t1" name="用例1：添加课程功能">
+<kw name="Delete All Courses" library="keywords" type="setup">
+<status status="PASS" starttime="20180904 14:52:07.758" endtime="20180904 14:52:14.366"></status>
+</kw>
+<kw name="Add Course" library="keywords">
+<arguments>
+<arg>java</arg>
+<arg>java描述</arg>
+<arg>2</arg>
+</arguments>
+<status status="PASS" starttime="20180904 14:52:14.366" endtime="20180904 14:52:14.972"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180904 14:52:15.980" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20180904 14:52:14.972" endtime="20180904 14:52:15.980"></status>
+</kw>
+<kw name="Add Course" library="keywords">
+<arguments>
+<arg>python</arg>
+<arg>python描述</arg>
+<arg>1</arg>
+</arguments>
+<status status="PASS" starttime="20180904 14:52:15.983" endtime="20180904 14:52:16.388"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180904 14:52:17.390" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20180904 14:52:16.388" endtime="20180904 14:52:17.390"></status>
+</kw>
+<kw name="List Courses" library="keywords">
+<assign>
+<var>${courses}</var>
+</assign>
+<msg timestamp="20180904 14:52:17.530" level="INFO">${courses} = ['python', 'java']</msg>
+<status status="PASS" starttime="20180904 14:52:17.390" endtime="20180904 14:52:17.530"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$courses==['python','java']</arg>
+</arguments>
+<status status="PASS" starttime="20180904 14:52:17.530" endtime="20180904 14:52:17.537"></status>
+</kw>
+<kw name="Delete All Courses" library="keywords" type="teardown">
+<status status="PASS" starttime="20180904 14:52:17.538" endtime="20180904 14:52:23.340"></status>
+</kw>
+<status status="PASS" starttime="20180904 14:52:07.756" endtime="20180904 14:52:23.340" critical="yes"></status>
+</test>
+<kw name="Tear Down Web Test" library="keywords" type="teardown">
+<status status="PASS" starttime="20180904 14:52:23.340" endtime="20180904 14:52:23.457"></status>
+</kw>
+<status status="PASS" starttime="20180904 14:52:00.570" endtime="20180904 14:52:23.457"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Tc01">Tc01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
